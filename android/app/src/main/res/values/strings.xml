@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DTPocketFM</string>
+    <!-- Example: Sets all OneSignal notification's accent color to Green by default.  -->
+    <!-- Color format is in ARGB. -->
+    <string name="onesignal_notification_accent_color">00000000</string>
+
+    <string name="facebook_app_id" translatable="false">3280664852154662</string>
+    <string name="facebook_client_token" translatable="false">646b0a8a5b5d8b3e03452ccdcc0a3d0e</string>
+
+    <string name="flutter_downloader_notification_started">Download started</string>
+    <string name="flutter_downloader_notification_in_progress">Download in progress</string>
+    <string name="flutter_downloader_notification_canceled">Download canceled</string>
+    <string name="flutter_downloader_notification_failed">Download failed</string>
+    <string name="flutter_downloader_notification_complete">Download complete</string>
+    <string name="flutter_downloader_notification_paused">Download paused</string>
+</resources>

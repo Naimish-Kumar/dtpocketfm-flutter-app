@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="OTT Flutter App">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="dtpocketfm">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <title>DTPocketFM</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    // var serviceWorkerVersion = '{{flutter_service_worker_version}}';
+    var serviceWorkerVersion = '{{flutter_service_worker_version}}';
+  </script>
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
+
+  <!-- iOS Apple login -->
+  <script type="text/javascript"
+    src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+
+  <script src="https://cdn.syncfusion.com/essential/js/scripts/ej2.base.min.js"></script>
+
+
+  <!-- Google login -->
+  <meta name="google-signin-client_id"
+    content="997133946428-0hnk7iqrfhn6ko2lpcv1edgkeqfg5n8k.apps.googleusercontent.com">
+
+  <!-- Open new Tab -->
+  <script src="script.js" type="application/javascript"></script>
+
+  <style>
+    .container {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      /* Default Axis is X*/
+      justify-content: center;
+      /* Main Axis */
+      align-items: center;
+      /* Cross Axis */
+    }
+
+    body {
+      width: 100%;
+      height: 100%;
+      background-color: black;
+    }
+
+    .indicator {
+      width: 50vw;
+    }
+  </style>
+</head>
+
+<body style="overflow: hidden">
+
+  <div id="loading_indicator" class="container">
+    <img class="indicator" src="./assets/loading.gif" />
+  </div>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyC3aX3uqQ4D5XR29e9iiQoBPrbA3xEQHpU",
+      authDomain: "dtapps-f3442.firebaseapp.com",
+      projectId: "dtapps-f3442",
+      storageBucket: "dtapps-f3442.appspot.com",
+      messagingSenderId: "997133946428",
+      appId: "1:997133946428:web:2bcdc158a61750bd7b7d39"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+  <script type="text/javascript">
+    pdfjsLib.GlobalWorkerOptions.workerSrc = "//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js";
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest" type="application/javascript"></script>
+
+  <!-- <script>
+    window.addEventListener('load', function (ev) {
+      // Download main.dart.js
+      _flutter.loader.load({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        }
+      }).then(function (engineInitializer) {
+        return engineInitializer.initializeEngine();
+      }).then(function (appRunner) {
+        return appRunner.runApp();
+      });
+    });
+  </script> -->
+  <script>
+    window.addEventListener('load', function (ev) {
+      // Download main.dart.js
+      _flutter.loader.load({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function (engineInitializer) {
+          engineInitializer.initializeEngine().then(function (appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+  <script type="text/javascript">window.flutterWebRenderer = "html";</script>
+
+</body>
+
+</html>
