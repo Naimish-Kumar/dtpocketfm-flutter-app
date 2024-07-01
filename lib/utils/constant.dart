@@ -12,7 +12,7 @@ class Constant {
   
   /* OneSignal App ID */
   
-  static String oneSignalAppId = "";
+  static String oneSignalAppId = "cad6e200-61fb-4c5c-a3e0-0b695dbc3d50";
 
   /* Constant for TV check */
   static bool isTV = false;
